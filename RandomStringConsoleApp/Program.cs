@@ -18,9 +18,18 @@ namespace RandomStringConsoleApp
             Console.WriteLine("String list:");
             foreach (string mW in myWords)
                 Console.WriteLine("{0}", mW);
-            Console.WriteLine("---------------------------");
+
+            Console.WriteLine("--------------string random-------------------");
             int randomString = random.Next(myWords.Count);
             Console.WriteLine("Random string: {0}", myWords[randomString]);
+
+            Console.WriteLine("--------------Five string random-------------");
+            Random rnd = new Random();
+            for(int i = 0; i < 5; i++)
+            {
+                int indexRnd = rnd.Next(myWords.Count);
+                Console.WriteLine("{0}", myWords[indexRnd]);
+            }
             Console.Read();
         }
     }
